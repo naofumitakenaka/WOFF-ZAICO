@@ -41,10 +41,9 @@
         return;
       }
 
-      const corsProxy = "https://corsproxy.io/?"; // 開発用CORSバイパス
-
-      const url = `https://api.zaico.io/v1/items?search_word=${encodeURIComponent(keyword)}`;
-      const finalUrl = corsProxy + encodeURIComponent(url);
+      const corsProxy = "https://api.allorigins.win/raw?url=";
+      const apiUrl = `https://api.zaico.io/v1/items?search_word=${encodeURIComponent(keyword)}`;
+      const finalUrl = corsProxy + encodeURIComponent(apiUrl);
 
       try {
         const response = await fetch(finalUrl, {
